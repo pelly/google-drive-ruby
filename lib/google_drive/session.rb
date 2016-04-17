@@ -274,7 +274,7 @@ module GoogleDrive
     #   session.create_spreadsheet("My new sheet")
     def create_spreadsheet(title = 'Untitled')
       file = drive.files.insert.request_schema.new(
-        title:    title,
+        title:     title,
         mimeType: 'application/vnd.google-apps.spreadsheet'
       )
       api_result = execute!(
